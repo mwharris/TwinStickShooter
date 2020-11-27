@@ -26,7 +26,7 @@ public:
 	bool IsDead = false;
 
 	UFUNCTION(BlueprintCallable, Category="Base Character")
-	virtual void CalculateHealth(float Delta);
+	virtual float CalculateHealth(float Delta);
 
 	virtual void CalculateDead();
 	virtual void Tick(float DeltaTime) override;

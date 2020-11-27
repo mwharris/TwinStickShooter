@@ -20,10 +20,11 @@ void ABaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }
 
-void ABaseCharacter::CalculateHealth(float Delta) 
+float ABaseCharacter::CalculateHealth(float Delta) 
 {
 	Health -= Delta;
 	CalculateDead();
+	return Health;
 }
 
 void ABaseCharacter::CalculateDead() 
